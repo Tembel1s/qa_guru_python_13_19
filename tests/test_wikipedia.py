@@ -13,6 +13,7 @@ def test_search():
         results.should(have.size_greater_than(0))
         results.first.should(have.text('Appium'))
 
+
 def test_search_with_click():
     with step('Type search'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, "Search Wikipedia")).should(be.visible).click()
@@ -23,4 +24,3 @@ def test_search_with_click():
         results.should(have.size_greater_than(0))
         results.first.should(have.text('Appium'))
         results.first.click()
-
